@@ -45,7 +45,10 @@
     * best_model_via_this_project.pdparams -> 基于本项目重新训练的模型，具体训练过程请参考 AIStudio 项目，Avg AUROC 84.7
 
 ## 代码使用
+* 同步项目代码
+
 * 下载数据集并解压至 ChestX-ray14 文件夹
+
 * 使用如下命令进行模型训练：
 
     ```
