@@ -37,6 +37,13 @@
 
 * AIStudio 项目：[论文复现：基于 Paddle2.0 复现 CheXNet 模型](https://aistudio.baidu.com/aistudio/projectdetail/2264427)（包含模型的训练 log 和 ckpt）
 
+## 预训练模型
+* 本项目提供了两个预训练模型：
+
+    * model_from_torch.pdparams -> 转换至 [arnoweng/CheXNet](https://github.com/arnoweng/CheXNet) 项目提供的预训练模型，精度对齐，Avg AUROC 84.1
+
+    * best_model_via_this_project.pdparams -> 基于本项目重新训练的模型，具体训练过程请参考 AIStudio 项目，Avg AUROC 84.7
+
 ## 代码使用
 * 下载数据集并解压至 ChestX-ray14 文件夹
 * 使用如下命令进行模型训练：
