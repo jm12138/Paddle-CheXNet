@@ -57,7 +57,7 @@
         step  30/614 - loss: 0.1637 - AUROC_Atelectasis: 0.5881 - AUROC_Cardiomegaly: 0.5548 - AUROC_Effusion: 0.6691 - AUROC_Infiltration: 0.5767 - AUROC_Mass: 0.5438 - AUROC_Nodule: 0.5179 - AUROC_Pneumonia: 0.5331 - AUROC_Pneumothorax: 0.6317 - AUROC_Consolidation: 0.5818 - AUROC_Edema: 0.6350 - AUROC_Emphysema: 0.5629 - AUROC_Fibrosis: 0.5629 - AUROC_Pleural_Thickening: 0.6101 - AUROC_Hernia: 0.7026 - AUROC_avg: 0.5908 - 3s/step
         ...
 
-* 使用如下命令进行模型训练（默认使用本项目训练的最佳模型参数）：
+* 使用如下命令进行模型精度测试（默认使用本项目训练的最佳模型参数）：
 
     ```
     $ python eval.py
