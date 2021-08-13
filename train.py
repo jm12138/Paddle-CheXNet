@@ -44,7 +44,7 @@ def train(args):
         boundaries=[epoch * steps_per_epoch for epoch in decay_epochs],
         values=[
             args.learning_rate * (args.decay_factor**i)
-            for i in range(decay_epochs + 1)
+            for i in range(len(decay_epochs) + 1)
         ],
         last_epoch=-1,
         verbose=False)
