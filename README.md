@@ -55,7 +55,7 @@
 * 使用如下命令进行模型训练：
 
     ```
-    $ python train.py
+    $ python train.py --data_dir=ChestX-ray14/images --train_list=ChestX-ray14/labels/train_list.txt --val_list=ChestX-ray14/labels/val_list.txt --save_dir=save --batch_size=128 --learning_rate=0.001 --decay_epochs=10,15,18 --decay_factor=0.1
     ```
         Epoch 1/20
         step  10/614 - loss: 0.1650 - AUROC_Atelectasis: 0.5343 - AUROC_Cardiomegaly: 0.5442 - AUROC_Effusion: 0.5442 - AUROC_Infiltration: 0.5400 - AUROC_Mass: 0.4854 - AUROC_Nodule: 0.5043 - AUROC_Pneumonia: 0.5403 - AUROC_Pneumothorax: 0.5507 - AUROC_Consolidation: 0.5129 - AUROC_Edema: 0.5020 - AUROC_Emphysema: 0.5979 - AUROC_Fibrosis: 0.5571 - AUROC_Pleural_Thickening: 0.5663 - AUROC_Hernia: 0.5823 - AUROC_avg: 0.5401 - 3s/step
@@ -66,7 +66,7 @@
 * 使用如下命令进行模型精度测试（默认使用本项目训练的最佳模型参数）：
 
     ```
-    $ python eval.py
+    $ python eval.py --data_dir=ChestX-ray14/images --test_list=ChestX-ray14/labels/test_list.txt --batch_size=128 --ckpt=pretrained_models/best_model_via_this_project.pdparams
     ```
         => loading checkpoint
         => loaded checkpoint
