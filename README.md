@@ -44,6 +44,9 @@
 
     * best_model_via_this_project.pdparams -> 基于本项目重新训练的模型，具体训练过程请参考 AIStudio 项目，Avg AUROC 84.7
 
+## 训练过程
+* 模型的训练日志放置于 logs 目录中
+
 ## 代码使用
 * 同步项目代码
 
