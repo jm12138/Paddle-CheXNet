@@ -89,7 +89,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--learning_rate', type=float, default=0.001)
     parser.add_argument('--epoch', type=int, default=20)
-    parser.add_argument('--decay_epochs', type=str, default='10, 15, 18')
+    parser.add_argument('--decay_epochs', type=str, default='10,15,18')
     parser.add_argument('--decay_factor', type=float, default=0.1)
     args = parser.parse_args()
 
