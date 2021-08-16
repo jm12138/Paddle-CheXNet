@@ -69,7 +69,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_dir', type=str, default='ChestX-ray14/images')
     parser.add_argument('--test_list', type=str, default='ChestX-ray14/labels/test_list.txt')
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--ckpt', type=str, default='best_model_via_this_project.pdparams')
+    parser.add_argument('--ckpt', type=str, default='pretrained_models/best_model_via_this_project.pdparams')
     args = parser.parse_args()
 
     evaluate(args)
