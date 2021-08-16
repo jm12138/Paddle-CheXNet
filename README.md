@@ -38,7 +38,7 @@
 * AIStudio 项目：[论文复现：基于 Paddle2.0 复现 CheXNet 模型](https://aistudio.baidu.com/aistudio/projectdetail/2264427)（包含模型的训练 log 和 ckpt）
 
 ## 预训练模型
-* 本项目提供了两个预训练模型：
+* 本项目提供了两个预训练模型（放置于 pretrained_models 目录下）：
 
     * model_from_torch.pdparams -> 转换至 [arnoweng/CheXNet](https://github.com/arnoweng/CheXNet) 项目提供的预训练模型，精度对齐，Avg AUROC 84.1
 
