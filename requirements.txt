@@ -1,0 +1,5 @@
+scikit-learn
+paddlepaddle-gpu
+opencv-python
+numpy
+pillow
