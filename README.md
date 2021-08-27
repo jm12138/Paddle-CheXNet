@@ -1,21 +1,35 @@
 # Paddle-CheXNet
-## 简介
+## 一、简介
 * 本项目基于 Paddle 框架复现 CheXNet 模型
-* 转换并对齐参考项目提供的预训练模型的参数和精度表现
+* 转换并对齐参考项目提供的预训练模型的参数和精度表现]
 * 使用本项目重新训练模型，在精度表现上（Avg AUROC 84.7）略优于论文中展示的指标（Avg AUROC 84.1）
-
-## 相关资料
 * 论文：[CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning](https://arxiv.org/pdf/1711.05225.pdf)
-
-* 数据集：[ChestX-ray14 dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
-
 * 参考项目：[arnoweng/CheXNet](https://github.com/arnoweng/CheXNet)
 
-* 验收标准：
 
-    ![](https://ai-studio-static-online.cdn.bcebos.com/5a72294f67f74fdfac3cceced5eb767ca6d75a41d41045608433e6be40a04502)
+## 二、复现精度
+* 测试精度：
 
-* 精度指标对比：
+    ```python
+    The final AUROCs: 
+    The average AUROC is 0.847
+    The AUROC of Atelectasis is 0.8292392176490241
+    The AUROC of Cardiomegaly is 0.9142859299652238
+    The AUROC of Effusion is 0.8875584024095078
+    The AUROC of Infiltration is 0.711814559849058
+    The AUROC of Mass is 0.8647347811493854
+    The AUROC of Nodule is 0.7921467608091082
+    The AUROC of Pneumonia is 0.7684077120089262
+    The AUROC of Pneumothorax is 0.8770951989569952
+    The AUROC of Consolidation is 0.8160893266094902
+    The AUROC of Edema is 0.8986931866913855
+    The AUROC of Emphysema is 0.9302391831183919
+    The AUROC of Fibrosis is 0.837411708221408
+    The AUROC of Pleural_Thickening is 0.7962435140282585
+    The AUROC of Hernia is 0.9311000806021127
+    ```
+ 
+* 精度对比：
 
     |     Pathology      | [Wang et al.](https://arxiv.org/abs/1705.02315) | [Yao et al.](https://arxiv.org/abs/1710.10501) | [CheXNet](https://arxiv.org/abs/1711.05225) | [arnoweng/CheXNet](https://github.com/arnoweng/CheXNet) Release Model  | [arnoweng/CheXNet](https://github.com/arnoweng/CheXNet) Improved Model | Paddle-CheXNet | 
     | :----------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :---------------------: | :----------------: | :----------------: |
@@ -37,17 +51,29 @@
 
 * AIStudio 项目：[论文复现：基于 Paddle2.0 复现 CheXNet 模型](https://aistudio.baidu.com/aistudio/projectdetail/2264427)（包含模型的训练 log 和 ckpt）
 
-## 预训练模型
-* 本项目提供了两个预训练模型（放置于 pretrained_models 目录下）：
+## 三、数据集
+* 项目使用的数据集为 ChestX-ray14
+* ChestX-ray 数据集包含 30,805 名患者的 112,120 张正面视图的X射线图像，以及利用 NLP 从相关放射学报告挖掘的 14 类疾病的图像标签（每个图像可以有多个标签）。
+* 数据集含有 14 类常见的胸部病理，包括肺不张、变实、浸润、气胸、水肿、肺气肿、纤维变性、积液、肺炎、胸膜增厚、心脏肥大、结节、肿块和疝气
+* 下载链接：[ChestX-ray14 dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
 
-    * model_from_torch.pdparams -> 转换至 [arnoweng/CheXNet](https://github.com/arnoweng/CheXNet) 项目提供的预训练模型，精度对齐，Avg AUROC 84.1
+## 四、环境依赖
+* 本项目依赖如下模块：
 
-    * best_model_via_this_project.pdparams -> 基于本项目重新训练的模型，具体训练过程请参考 AIStudio 项目，Avg AUROC 84.7
+    ```python
+    scikit-learn
+    paddlepaddle-gpu
+    opencv-python
+    numpy
+    pillow
+    ```
+* 可通过如下命令安装依赖：
 
-## 训练过程
-* 模型的训练日志放置于 logs 目录中
+    ```shell
+    $ pip install -r requirements.txt
+    ```
 
-## 代码使用
+## 五、快速使用
 * 同步项目代码
 
 * 下载数据集并解压至 ChestX-ray14 文件夹
