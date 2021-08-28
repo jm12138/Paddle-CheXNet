@@ -5,6 +5,7 @@
 * 使用本项目重新训练模型，在精度表现上（Avg AUROC 84.7）略优于论文中展示的指标（Avg AUROC 84.1）
 * 论文：[CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning](https://arxiv.org/pdf/1711.05225.pdf)
 * 参考项目：[arnoweng/CheXNet](https://github.com/arnoweng/CheXNet)
+* AIStudio 项目：[论文复现：基于 Paddle2.0 复现 CheXNet 模型](https://aistudio.baidu.com/aistudio/projectdetail/2264427)（包含模型的训练 log 和 ckpt）
 
 
 ## 二、复现精度
@@ -48,8 +49,6 @@
     | Pleural Thickening |                  0.708                   |                  0.765                   |                  0.8062                  |         0.7831          |       0.7914       | 0.7962 |
     |       Hernia       |                  0.767                   |                  0.914                   |                  0.9164                  |         0.9104          |       0.9206       | 0.9311 |
     | Avg AUROCs | | | 0.841 | 0.843 | 0.848 | 0.847 |
-
-* AIStudio 项目：[论文复现：基于 Paddle2.0 复现 CheXNet 模型](https://aistudio.baidu.com/aistudio/projectdetail/2264427)（包含模型的训练 log 和 ckpt）
 
 ## 三、数据集
 * 项目使用的数据集为 ChestX-ray14
