@@ -80,7 +80,7 @@
 * 使用如下命令进行模型训练：
 
     ```
-    $ python tools/train.py \
+    $ python train.py \
         --data_dir=dataset/images \
         --train_list=dataset/labels/train_list.txt \
         --val_list=dataset/labels/val_list.txt \
@@ -99,7 +99,7 @@
 * 使用如下命令进行模型精度测试（默认使用本项目训练的最佳模型参数）：
 
     ```
-    $ python tools/eval.py \
+    $ python eval.py \
         --data_dir=dataset/images \
         --test_list=dataset/labels/test_list.txt \
         --batch_size=128 \
