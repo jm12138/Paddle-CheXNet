@@ -8,9 +8,9 @@ from paddle.vision import transforms
 from paddle.callbacks import EarlyStopping
 from paddle.optimizer.lr import PiecewiseDecay
 
-from chexnet.model import CheXNet
-from chexnet.data import ChestXrayDataSet
-from chexnet.utility import N_CLASSES, CLASS_NAMES, AUROC
+from ..chexnet.model import CheXNet
+from ..chexnet.data import ChestXrayDataSet
+from ..chexnet.utility import N_CLASSES, CLASS_NAMES, AUROC
 
 
 def train(args):
