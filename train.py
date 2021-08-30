@@ -1,15 +1,16 @@
 import math
 import argparse
 
-from model import CheXNet
 from paddle import Model
 from paddle.nn import BCELoss
-from data import ChestXrayDataSet
 from paddle.optimizer import Adam
 from paddle.vision import transforms
 from paddle.callbacks import EarlyStopping
 from paddle.optimizer.lr import PiecewiseDecay
-from utility import N_CLASSES, CLASS_NAMES, AUROC
+
+from chexnet.model import CheXNet
+from chexnet.data import ChestXrayDataSet
+from chexnet.utility import N_CLASSES, CLASS_NAMES, AUROC
 
 
 def train(args):
@@ -82,9 +83,13 @@ def train(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str, default='ChestX-ray14/images')
-    parser.add_argument('--train_list', type=str, default='ChestX-ray14/labels/train_list.txt')
-    parser.add_argument('--val_list', type=str, default='ChestX-ray14/labels/val_list.txt')
+    parser.add_argument('--data_dir', type=str, default='dataset/images')
+    parser.add_argument('--train_list',
+                        type=str,
+                        default='dataset/labels/train_list.txt')
+    parser.add_argument('--val_list',
+                        type=str,
+                        default='dataset/labels/val_list.txt')
     parser.add_argument('--save_dir', type=str, default='save')
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--learning_rate', type=float, default=0.001)

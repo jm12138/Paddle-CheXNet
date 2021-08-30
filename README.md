@@ -51,10 +51,10 @@
     | Avg AUROCs | | | 0.841 | 0.843 | 0.848 | 0.847 |
 
 ## 三、数据集
-* 项目使用的数据集为 ChestX-ray14
+* 项目使用的数据集为 dataset
 * ChestX-ray 数据集包含 30,805 名患者的 112,120 张正面视图的X射线图像，以及利用 NLP 从相关放射学报告挖掘的 14 类疾病的图像标签（每个图像可以有多个标签）。
 * 数据集含有 14 类常见的胸部病理，包括肺不张、变实、浸润、气胸、水肿、肺气肿、纤维变性、积液、肺炎、胸膜增厚、心脏肥大、结节、肿块和疝气
-* 下载链接：[ChestX-ray14 dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
+* 下载链接：[dataset dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
 
 ## 四、环境依赖
 * 本项目依赖如下模块：
@@ -75,12 +75,12 @@
 ## 五、快速使用
 * 同步项目代码
 
-* 下载数据集并解压至 ChestX-ray14 文件夹
+* 下载数据集并解压至 dataset 文件夹
 
 * 使用如下命令进行模型训练：
 
     ```
-    $ python train.py --data_dir=ChestX-ray14/images --train_list=ChestX-ray14/labels/train_list.txt --val_list=ChestX-ray14/labels/val_list.txt --save_dir=save --batch_size=128 --learning_rate=0.001 --decay_epochs=10,15,18 --decay_factor=0.1
+    $ python train.py --data_dir=dataset/images --train_list=dataset/labels/train_list.txt --val_list=dataset/labels/val_list.txt --save_dir=save --batch_size=128 --learning_rate=0.001 --decay_epochs=10,15,18 --decay_factor=0.1
     ```
         Epoch 1/20
         step  10/614 - loss: 0.1650 - AUROC_Atelectasis: 0.5343 - AUROC_Cardiomegaly: 0.5442 - AUROC_Effusion: 0.5442 - AUROC_Infiltration: 0.5400 - AUROC_Mass: 0.4854 - AUROC_Nodule: 0.5043 - AUROC_Pneumonia: 0.5403 - AUROC_Pneumothorax: 0.5507 - AUROC_Consolidation: 0.5129 - AUROC_Edema: 0.5020 - AUROC_Emphysema: 0.5979 - AUROC_Fibrosis: 0.5571 - AUROC_Pleural_Thickening: 0.5663 - AUROC_Hernia: 0.5823 - AUROC_avg: 0.5401 - 3s/step
@@ -91,7 +91,7 @@
 * 使用如下命令进行模型精度测试（默认使用本项目训练的最佳模型参数）：
 
     ```
-    $ python eval.py --data_dir=ChestX-ray14/images --test_list=ChestX-ray14/labels/test_list.txt --batch_size=128 --ckpt=pretrained_models/best_model_via_this_project.pdparams
+    $ python eval.py --data_dir=dataset/images --test_list=dataset/labels/test_list.txt --batch_size=128 --ckpt=pretrained_models/model_best.pdparams
     ```
         => loading checkpoint
         => loaded checkpoint

@@ -4,15 +4,18 @@ import argparse
 import paddle.vision.transforms as transforms
 
 from tqdm import tqdm
-from model import CheXNet
 from paddle.io import DataLoader
-from data import ChestXrayDataSet
-from utility import N_CLASSES, CLASS_NAMES, TenCrop, Lambda, AUROC
+
+from chexnet.model import CheXNet
+from chexnet.data import ChestXrayDataSet
+from chexnet.utility import N_CLASSES, CLASS_NAMES, TenCrop, Lambda, AUROC
+
 
 def print_aurocs(AUROCs):
     print('The average AUROC is {AUROC_avg:.3f}'.format(AUROC_avg=AUROCs[-1]))
     for i in range(N_CLASSES):
         print('The AUROC of {} is {}'.format(CLASS_NAMES[i], AUROCs[i]))
+
 
 def evaluate(args):
     # initialize and load the model
@@ -66,10 +69,14 @@ def evaluate(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str, default='ChestX-ray14/images')
-    parser.add_argument('--test_list', type=str, default='ChestX-ray14/labels/test_list.txt')
+    parser.add_argument('--data_dir', type=str, default='dataset/images')
+    parser.add_argument('--test_list',
+                        type=str,
+                        default='dataset/labels/test_list.txt')
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--ckpt', type=str, default='pretrained_models/best_model_via_this_project.pdparams')
+    parser.add_argument('--ckpt',
+                        type=str,
+                        default='pretrained_models/model_paddle.pdparams')
     args = parser.parse_args()
 
     evaluate(args)
