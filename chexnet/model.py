@@ -1,5 +1,5 @@
 import paddle.nn as nn
-from densenet import DenseNet121
+from .densenet import DenseNet121
 
 
 class CheXNet(nn.Layer):
