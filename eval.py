@@ -6,9 +6,9 @@ import paddle.vision.transforms as transforms
 from tqdm import tqdm
 from paddle.io import DataLoader
 
-from ..chexnet.model import CheXNet
-from ..chexnet.data import ChestXrayDataSet
-from ..chexnet.utility import N_CLASSES, CLASS_NAMES, TenCrop, Lambda, AUROC
+from chexnet.model import CheXNet
+from chexnet.data import ChestXrayDataSet
+from chexnet.utility import N_CLASSES, CLASS_NAMES, TenCrop, Lambda, AUROC
 
 
 def print_aurocs(AUROCs):
