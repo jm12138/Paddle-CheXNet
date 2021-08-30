@@ -103,7 +103,7 @@
         --data_dir=dataset/images \
         --test_list=dataset/labels/test_list.txt \
         --batch_size=128 \
-        --ckpt=pretrained_models/model_best.pdparams
+        --ckpt=pretrained_models/model_paddle.pdparams
     ```
         => loading checkpoint
         => loaded checkpoint
