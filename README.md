@@ -180,3 +180,7 @@
     |骨干网络|DenseNet 121|
     |应用场景|多标签分类（胸部 X 光片肺炎检测）|
     |支持硬件| GPU / CPU |
+
+* 具体的网络结构如下图：
+
+    ![](https://ai-studio-static-online.cdn.bcebos.com/6cc50e31047e4f41b18c7753456c4f251260909bee734f8590823efccbabee72)
