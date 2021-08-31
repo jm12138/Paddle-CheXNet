@@ -129,6 +129,32 @@
 ## 六、代码结构与详细说明
 * 代码结构
 
+    ```python
+    │  train.py # 模型训练脚本
+    │  eval.py # 模型测试脚本
+    │  requirements.txt # 依赖环境列表
+    │
+    ├─chexnet # ChexNet 代码
+    │      data.py # 数据处理
+    │      densenet.py # DenseNet
+    │      model.py # CheXNet Model
+    │      utility.py # 功能代码
+    │
+    ├─dataset
+    │  ├─images # 数据集图像
+    │  │
+    │  └─labels # 数据集列表
+    │          test_list.txt # 测试集
+    │          train_list.txt # 训练集
+    │          val_list.txt # 验证集
+    │
+    ├─logs # 训练 log
+    │
+    └─pretrained_models # 预训练模型
+            model_paddle.pdparams # 本项目训练的参数文件
+            model_torch.pdparams # 转换自参考项目的参数文件
+    ```
+
 * 参数说明：
 
     |参数|默认值|说明|适用脚本|
