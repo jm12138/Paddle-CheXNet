@@ -129,18 +129,19 @@
 * 代码结构
 
 * 参数说明：
-|参数|默认值|说明|适用脚本|
-|:-:|:-:|:-:|:-:|
-|data_dir|dataset/images|数据集图片目录|train / eval|
-|save_dir|save|保存目录|train|
-|train_list|dataset/labels/train_list.txt|数据集训练集列表|train|
-|val_list|dataset/labels/val_list.txt|数据集验证集列表|train|
-|test_list|dataset/labels/test_list.txt|数据集测试集列表|eval|
-|batch_size|128|数据处理批大小|train / eval|
-|learning_rate|0.001|学习率|train|
-|decay_epochs|10,15,18|学习率衰减轮次|train|
-|decay_factor|0.1|学习率衰减因子|train|
-|ckpt|pretrained_models/model_paddle.pdparams|预训练模型路径|eval|
+
+    |参数|默认值|说明|适用脚本|
+    |:-:|:-:|:-:|:-:|
+    |data_dir|dataset/images|数据集图片目录|train / eval|
+    |save_dir|save|保存目录|train|
+    |train_list|dataset/labels/train_list.txt|数据集训练集列表|train|
+    |val_list|dataset/labels/val_list.txt|数据集验证集列表|train|
+    |test_list|dataset/labels/test_list.txt|数据集测试集列表|eval|
+    |batch_size|128|数据处理批大小|train / eval|
+    |learning_rate|0.001|学习率|train|
+    |decay_epochs|10,15,18|学习率衰减轮次|train|
+    |decay_factor|0.1|学习率衰减因子|train|
+    |ckpt|pretrained_models/model_paddle.pdparams|预训练模型路径|eval|
 
 ## 七、模型信息
 |信息|说明|
