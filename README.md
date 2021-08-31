@@ -88,7 +88,8 @@
         --batch_size=128 \
         --learning_rate=0.001 \
         --decay_epochs=10,15,18 \
-        --decay_factor=0.1
+        --decay_factor=0.1 \
+        --epoch=20
     ```
         Epoch 1/20
         step  10/614 - loss: 0.1650 - AUROC_Atelectasis: 0.5343 - AUROC_Cardiomegaly: 0.5442 - AUROC_Effusion: 0.5442 - AUROC_Infiltration: 0.5400 - AUROC_Mass: 0.4854 - AUROC_Nodule: 0.5043 - AUROC_Pneumonia: 0.5403 - AUROC_Pneumothorax: 0.5507 - AUROC_Consolidation: 0.5129 - AUROC_Edema: 0.5020 - AUROC_Emphysema: 0.5979 - AUROC_Fibrosis: 0.5571 - AUROC_Pleural_Thickening: 0.5663 - AUROC_Hernia: 0.5823 - AUROC_avg: 0.5401 - 3s/step
@@ -138,6 +139,7 @@
     |val_list|dataset/labels/val_list.txt|数据集验证集列表|train|
     |test_list|dataset/labels/test_list.txt|数据集测试集列表|eval|
     |batch_size|128|数据处理批大小|train / eval|
+    |epoch|20|训练轮次|train|
     |learning_rate|0.001|学习率|train|
     |decay_epochs|10,15,18|学习率衰减轮次|train|
     |decay_factor|0.1|学习率衰减因子|train|
