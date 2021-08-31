@@ -183,4 +183,4 @@
 
 * 具体的网络结构如下图：
 
-    ![](https://ai-studio-static-online.cdn.bcebos.com/6cc50e31047e4f41b18c7753456c4f251260909bee734f8590823efccbabee72)
+    ![](https://ai-studio-static-online.cdn.bcebos.com/864ca7dad49d4a88988675dc791ad465c104a0876d1f460996059283fd2dc467)
