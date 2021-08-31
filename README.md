@@ -124,3 +124,11 @@
         The AUROC of Fibrosis is 0.837411708221408
         The AUROC of Pleural_Thickening is 0.7962435140282585
         The AUROC of Hernia is 0.9311000806021127
+
+## 七、模型信息
+|信息|说明|
+|:-:|:-:|
+|框架版本|Paddle 2.1.2|
+|骨干网络|DenseNet 121|
+|应用场景|多标签分类（胸部 X 光片肺炎检测）|
+|支持硬件| GPU / CPU |
